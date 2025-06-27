@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>გაიღიმე 💕</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #89f7fe, #66a6ff, #fcb69f, #ffecd2);
+      background-size: 400% 400%;
+      animation: gradientBackground 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glow-text {
+      font-size: 2.3rem;
+      font-weight: bold;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px);
+      animation: glowingText 5s linear infinite;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      z-index: 2;
+    }
+
+    @keyframes glowingText {
+      0% { color: #ff4e50; }
+      25% { color: #fc913a; }
+      50% { color: #f9d423; }
+      75% { color: #47cacc; }
+      100% { color: #ff4e50; }
+    }
+
+    /* გული */
+    .heart {
+      width: 100px;
+      height: 90px;
+      background-color: #ff5e73;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%) rotate(-45deg);
+      animation: heartbeat 1.5s infinite;
+      z-index: 1;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background-color: #ff5e73;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: translateX(-50%) rotate(-45deg) scale(1); }
+      50% { transform: translateX(-50%) rotate(-45deg) scale(1.2); }
+      100% { transform: translateX(-50%) rotate(-45deg) scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- გულიანი ანიმაცია -->
+  <div class="heart"></div>
+
+  <!-- ანიმაციური ტექსტი -->
+  <div class="glow-text">მარი გაიღიმე 😊 შენ არასდროს უნდა იყო მოწყენილი</div>
+
+</body>
+</html>
